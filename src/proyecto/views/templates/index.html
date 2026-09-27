@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>{{ nombre }}</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    pre { white-space: pre-wrap; background: #f4f4f4; padding: 1rem; border-radius: 6px; }
+    a.boton {
+      display: inline-block; margin-bottom: 1rem; padding: 0.6rem 1.2rem;
+      background: #2563eb; color: white; text-decoration: none; border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>{{ nombre }}</h1>
+  <a class="boton" href="{{ url_for('pdf.exportar') }}">Exportar a TXT</a>
+  <pre>{{ texto }}</pre>
+</body>
+</html>
