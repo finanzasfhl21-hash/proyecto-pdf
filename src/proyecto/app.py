@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from flask import Flask
@@ -14,4 +15,5 @@ def create_app() -> Flask:
 
 
 def main() -> None:
-    create_app().run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    create_app().run(host="0.0.0.0", port=port)

@@ -2,9 +2,7 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
-PDF_PATH = Path(
-    r"C:\Users\pedro\OneDrive\Desktop\Proyecto PDF\PDF\El Aprendiz de Trading (alta calidad).pdf"
-)
+PDF_PATH = Path(__file__).resolve().parents[3] / "data" / "El Aprendiz de Trading (alta calidad).pdf"
 
 
 class PdfModel:
